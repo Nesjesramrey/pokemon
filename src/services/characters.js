@@ -1,7 +1,19 @@
+//const pokemonId = Math.floor(Math.random() * 806 + 1);
+
 export const getCharacters = async () => {
-  const response = await fetch(
-    `https://pokeapi.co/api/v2/ability/?limit=20&offset=20`
-  );
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/`);
+  const data = await response.json();
+  return data;
+};
+
+export const list = async () => {
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/`);
+  const data = await response.json();
+  return data;
+};
+
+export const retrieve = async (id) => {
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/`);
   const data = await response.json();
   return data;
 };
