@@ -22,16 +22,12 @@ export default function Home() {
 
   const pokemons = characters.map((character, index) => (
     <div className="card" key={index}>
-      <div className="nameCharacter">Nombre: {character.name}</div>
-      <div className="nameSpecie">Especie: {character.url}</div>
-      <img
-        className="imageCharacter"
-        src={character.name}
-        alt={character.name}
-      />
+      <div className="nameCharacter text-capitalize">
+        Name: {character.name}
+      </div>
+      <div className="nameSpecie ">Especie: {character.url}</div>
     </div>
   ));
-  //console.log(ricksandMortys);
 
   return (
     <div className="mainContainer">

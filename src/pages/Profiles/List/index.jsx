@@ -25,7 +25,7 @@ export default function ProfileList() {
   const buildUsers = (user, index) => (
     <div key={index}>
       <p>
-        {user.firstName} {user.lastName}
+        {user.name} {user.url}
       </p>
 
       <button onClick={() => navigate(user.id)}>Detalle</button>
